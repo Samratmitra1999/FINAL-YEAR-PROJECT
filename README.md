@@ -60,7 +60,7 @@
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="[https://www.firebase.com/](https://firebase.google.com/)">FIREBASE</a></li>
+    <li><a href="https://firebase.google.com/">FIREBASE</a></li>
   </ul>
 </details>
 
@@ -156,7 +156,7 @@ Distributed under the no License. See LICENSE.txt for more information.
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 
-Project Link: (https://github.com/Louis3797/awesome-readme-template)](https://github.com/Samratmitra1999/FINAL-YEAR-PROJECT)
+Project Link: (https://github.com/Samratmitra1999/FINAL-YEAR-PROJECT)
 
 
 <!-- Acknowledgments -->
