@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="static/BACKGROUND.jpg" alt="logo" width="200" height="auto" />
+  <img src="static/logo.png" alt="logo" width="200" height="auto" />
   
   <h1>CAR NUMBER PLATE RECOGNITION</h1>
   
