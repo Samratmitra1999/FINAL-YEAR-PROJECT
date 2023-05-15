@@ -1,4 +1,8 @@
-<img src=”[https://userimages.githubusercontent.com/75753187/123358567-aac7b900-d539-11eb-8275-0b380264bb4c.png](https://github.com/Samratmitra1999/FINAL-YEAR-PROJECT/assets/81224052/e1a252cf-9f0f-4917-b390-a6a807bb5f02)" alt=”my banner”>
+<p align=”center”>
+
+<img width=”200" height=”200" src=”[https://user-images.githubusercontent.com/75753187/123358567-aac7b900-d539-11eb-8275-0b380264bb4c.png](https://github.com/Samratmitra1999/FINAL-YEAR-PROJECT/assets/81224052/e1a252cf-9f0f-4917-b390-a6a807bb5f02)" alt=”my banner”>
+
+</p>
 
 
 ### Hi, I'm SAMRAT MITRA <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">
