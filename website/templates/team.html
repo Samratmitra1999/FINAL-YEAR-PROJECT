@@ -1,0 +1,156 @@
+{% extends "base.html" %} {% block title %}Our Team {% endblock %}
+  {% block stylesheet %}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    {% endblock %}
+    {% block style %}
+	<style>
+  #header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  color: #700374;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 36px;
+  font-family: 'Poppins
+}
+
+#header h1 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  animation: typing 3s steps(20), blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+</style>
+    
+  {% endblock %}
+    {% block content %}
+    <section>
+      <div class="row">
+		<header id="header">
+        <h1 id="header-text"></h1>
+		</header>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="team-member-1.png" />
+            </div>
+            <h3>SAMRAT MITRA</h3>
+            <p>Developer</p>
+            <div class="icons">
+              <a href="https://twitter.com/SamratM45060644">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/samrat-mitra-0849301ba/">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/Samratmitra1999">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto: samratmitra1999@gmail.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="team-member-2.jpg" />
+            </div>
+            <h3>SHREYASHI TALUKDAR</h3>
+            <p>Programmer</p>
+            <div class="icons">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/shreyashi-talukdar-170059268">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto: talukdar182000swety@gmail.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="team-member-3.jpg" />
+            </div>
+            <h3>ANKITA MONDAL</h3>
+            <p>Programmer</p>
+            <div class="icons">
+              <a href="https://instagram.com/ankita7907?igshid=ZDdkNTZiNTM=">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/ankita-mondal-33165a207">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto: mondalankita602@gmail.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      var i = 0;
+      var txt = ' OUR TEAM ...';
+      var speed = 150;
+    
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("header-text").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        } else {
+          i = 0; 
+          document.getElementById("header-text").innerHTML = ""; 
+          setTimeout(typeWriter, speed);
+        }
+      }
+    
+      window.onload = function() {
+        typeWriter();
+      };
+    </script>
+    {% endblock %}

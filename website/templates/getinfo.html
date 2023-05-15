@@ -1,0 +1,278 @@
+
+<head>
+	<title>Vehicle Information</title>
+{% extends "base.html" %} {% block title %}Information {% endblock %}
+  {% block stylesheet %}
+	<style>
+		body {
+			font-family: 'Roboto', sans-serif;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 30px;
+			color: #222;
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 10px;
+			color: #444;
+		}
+		
+		input[type="text"] {
+			padding: 10px;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			width: 200px;
+			margin-right: 10px;
+			font-size: 16px;
+			color: #333;
+		}
+		
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		
+		button:hover {
+			background-color: #3e8e41;
+		}
+		thead {
+   			display: none;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			margin-bottom: 30px;
+			box-shadow: 0 0 20px rgba(0,0,0,0.1);
+			font-size: 18px;
+			font-weight: bold;
+		}
+		
+		table, th, td {
+			border: 1px solid #ddd;
+			padding: 10px;
+			font-weight: bold;
+		}
+		
+		th {
+			background-color: #4CAF50;
+			color: white;
+			text-align: left;
+		}
+		
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+		
+		tr:hover {
+			background-color: #ddd;
+		}
+		
+		.error {
+			color: red;
+			font-weight: bold;
+			margin-top: 20px;
+		}
+		#rcCodes {
+			background-color: #fff;
+			border-radius: 5px;
+			max-width: 400px;
+			margin-top: 10px;
+		}
+
+		#rcCodes div {
+			font-size: 18px;
+			color: #0d0d0d;
+			margin-bottom: 5px;
+			text-align: center;
+		}
+
+		.hidden {
+ 		 display: none;
+		}
+		#disclaimer-button {
+			background-color: blue;
+			color: white;
+			font-size: 14px;
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		  }
+		  
+		  #disclaimer-info {
+			display: none;
+			position: fixed;
+			bottom: 50px;
+			right: 20px;
+			padding: 10px;
+			background-color: white;
+			border: 1px solid grey;
+			border-radius: 5px;
+			z-index: 1;
+			width: 300px;
+			font-size: 12px;
+		  }
+		  
+		  #disclaimer-button:hover + #disclaimer-info {
+			display: block;
+		  }		  
+	</style>
+	{% endblock %}
+    {% block content %}
+	<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+</head>
+<body>
+	<h1 style="font-family: Arial, sans-serif; font-size: 36px; color: #333; text-align: center; margin-bottom: 20px; text-shadow: 2px 2px #ccc;">VEHICLE INFORMATION</h1>
+	<div style="text-align: center;">
+		<label for="vehicle-number" style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">ENTER VEHICLE NUMBER:</label>
+		<input type="text" id="vehicle-number">
+		<button onclick="getVehicleInfo()">Search</button>
+	  </div>	  
+
+	<table id="vehicle-info">
+		<thead>
+			<tr>
+				<th>Vehicle Number</th>
+				<th>Owner Name</th>
+				<th>Owner Number</th>
+				<th>Registration Year</th>
+				<th>Model</th>
+				<th>ENGINE NO.</th>
+				<th>Chasis No.</th>
+				<th>Fuel Type</th>
+				<th>RTO</th>
+				<th>State</th>
+				<th>RC Status</th>
+				<th>Tax Paid Upto</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+
+	<script>
+		const vehicleNumberInput = document.getElementById("vehicle-number");
+		vehicleNumberInput.addEventListener("input", function () {
+		this.value = this.value.replace(/\s/g, "").toUpperCase();
+	});
+		
+		 const firebaseConfig = {
+  apiKey: "AIzaSyC7PnmHrjTwjQqKsiVvPiHnVTW2DTtCJII",
+  authDomain: "number-plate-recognition-c705b.firebaseapp.com",
+  databaseURL: "https://number-plate-recognition-c705b-default-rtdb.firebaseio.com",
+  projectId: "number-plate-recognition-c705b",
+  storageBucket: "number-plate-recognition-c705b.appspot.com",
+  messagingSenderId: "662715340256",
+  appId: "1:662715340256:web:051011b6bfeb38ec0b4785",
+  
+};
+		firebase.initializeApp(firebaseConfig);
+		var database = firebase.database();
+
+		function getVehicleInfo() {
+		var vehicleNumber = document.getElementById("vehicle-number").value;
+		var vehicleInfoRef = database.ref('vehicle-details/' + vehicleNumber);
+		vehicleInfoRef.once('value', function(snapshot) {
+			var vehicleInfo = snapshot.val();
+			if (vehicleInfo) {
+				var table = document.getElementById("vehicle-info");
+				table.innerHTML = "<tr><th>Vehicle Number</th><td>" + vehicleNumber + "</td></tr>" +
+								"<tr><th>Owner Name</th><td>" + vehicleInfo.ownerName + "</td></tr>" +
+								"<tr><th>Owner Number</th><td>" + vehicleInfo.ownerNumber + "</td></tr>" +
+								"<tr><th>Registration Year</th><td>" + vehicleInfo.regYear + "</td></tr>" +
+								"<tr><th>Model</th><td>" + vehicleInfo.model + "</td></tr>" +
+								"<tr><th>Engine Number</th><td>" + vehicleInfo.engineNumber + "</td></tr>" +
+								"<tr><th>Chasis Number</th><td>" + vehicleInfo.chasisNumber + "</td></tr>" +
+								"<tr><th>Fuel Type</th><td>" + vehicleInfo.fuelType + "</td></tr>" +
+								"<tr><th>RTO</th><td>" + vehicleInfo.rto + "</td></tr>" +
+								"<tr><th>State</th><td>" + vehicleInfo.state + "</td></tr>" +
+								"<tr><th>RC Status</th><td>" + vehicleInfo.rcStatus + "</td></tr>" +
+								"<tr><th>Tax Paid Upto</th><td>" + vehicleInfo.taxPaidUpto + "</td></tr>";
+			} else {
+				document.getElementById("vehicle-info").innerHTML = "<tr><td colspan='2'>Vehicle not found in database.</td></tr>";
+			}
+		});
+	}
+	</script>
+	<body>
+		<button onclick="toggleRCCodes()">RC Codes</button>
+		<div id="rcCodes"></div>
+		<script>
+		  let rcCodesVisible = false;
+		  const rcCodes = {
+			"Andhra Pradesh": "AP",
+			"Arunachal Pradesh": "AR",
+			"Assam": "AS",
+			"Bihar": "BR",
+			"Chhattisgarh": "CG",
+			"Goa": "GA",
+			"Gujarat": "GJ",
+			"Haryana": "HR",
+			"Himachal Pradesh": "HP",
+			"Jharkhand": "JH",
+			"Karnataka": "KA",
+			"Kerala": "KL",
+			"Madhya Pradesh": "MP",
+			"Maharashtra": "MH",
+			"Manipur": "MN",
+			"Meghalaya": "ML",
+			"Mizoram": "MZ",
+			"Nagaland": "NL",
+			"Odisha": "OD",
+			"Punjab": "PB",
+			"Rajasthan": "RJ",
+			"Sikkim": "SK",
+			"Tamil Nadu": "TN",
+			"Telangana": "TS",
+			"Tripura": "TR",
+			"Uttar Pradesh": "UP",
+			"Uttarakhand": "UK",
+			"West Bengal": "WB"
+		  };
+		  const rcCodesDiv = document.getElementById("rcCodes");
+	
+		  function toggleRCCodes() {
+			rcCodesVisible = !rcCodesVisible;
+			if (rcCodesVisible) {
+			  for (const state in rcCodes) {
+				const rcCode = rcCodes[state];
+				const stateDiv = document.createElement("div");
+				stateDiv.textContent = `${state}: ${rcCode}`;
+				rcCodesDiv.appendChild(stateDiv);
+			  }
+			} else {
+			  rcCodesDiv.innerHTML = "";
+			}
+		  }
+		</script>
+		<button id="disclaimer-button">Disclaimer</button>
+		<div id="disclaimer-info" style="display: none;">
+		<p>This site is neither affiliated nor connected with any Government Entity, RTO or Parivahan in any way. We do not save or host any information you search or share on this site. This website is made for informational purpose only. To search RC/DL details directly, head to the parivahan site:-<a href="https://parivahan.gov.in/">OFFICIAL PARIVAHAN WEBSITE</a>.</p>
+		</div>
+		<script>
+		const disclaimerButton = document.getElementById('disclaimer-button');
+			const disclaimerInfo = document.getElementById('disclaimer-info');
+
+			disclaimerButton.addEventListener('click', function() {
+			if (disclaimerInfo.style.display === 'none') {
+				disclaimerInfo.style.display = 'block';
+			} else {
+				disclaimerInfo.style.display = 'none';
+			}
+			});
+		</script>
+	</body>			
+
+	{% endblock %}

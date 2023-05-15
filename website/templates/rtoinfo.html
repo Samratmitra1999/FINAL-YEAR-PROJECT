@@ -1,0 +1,232 @@
+
+<head>
+  <meta charset="UTF-8">
+  <title>ADD VEHICLE DETAILS</title>
+{% extends "base.html" %} {% block title %} ADD Information {% endblock %}
+  {% block stylesheet %}
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+      background-color: #f7f7f7;
+    }
+     h1 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    text-shadow: 2px 2px 2px #ccc;
+  }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+    }
+    input[type="text"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    button[type="button"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button[type="button"]:hover {
+      background-color: #3e8e41;
+    }
+    select {
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #f5f5f5;
+    }
+
+    select:focus {
+      outline: none;
+      border: 1px solid #8b8bff;
+    }
+
+    option {
+      font-size: 18px;
+    }
+  </style>
+  {% endblock %}
+  {% block content %}
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+  <script>
+    const firebaseConfig = {
+  apiKey: "AIzaSyC7PnmHrjTwjQqKsiVvPiHnVTW2DTtCJII",
+  authDomain: "number-plate-recognition-c705b.firebaseapp.com",
+  databaseURL: "https://number-plate-recognition-c705b-default-rtdb.firebaseio.com",
+  projectId: "number-plate-recognition-c705b",
+  storageBucket: "number-plate-recognition-c705b.appspot.com",
+  messagingSenderId: "662715340256",
+  appId: "1:662715340256:web:051011b6bfeb38ec0b4785",
+  
+};
+    firebase.initializeApp(firebaseConfig);
+
+function addVehicle() {
+  var vehicleNumber = document.getElementById("vehicle-number").value;
+  var ownerName = document.getElementById("owner-name").value;
+  var ownerNumber = document.getElementById("owner-number").value;
+  var model = document.getElementById("model").value;
+  var engineNumber = document.getElementById("engine-number").value;
+  var chasisNumber = document.getElementById("chasis-number").value;
+  var regYear = document.getElementById("reg-year").value;
+  var rto = document.getElementById("rto").value;
+  var state = document.getElementById("state").value;
+  var taxPaidUpto = document.getElementById("tax-paid-upto").value;
+  var rcStatus = document.getElementById("rc-status").value;
+  var fuelType = document.getElementById("fuel-type").value;
+  
+  firebase.database().ref('vehicle-details/' + vehicleNumber).set({
+    ownerName: ownerName,
+    ownerNumber: ownerNumber,
+    model: model,
+    engineNumber: engineNumber,
+    chasisNumber: chasisNumber,
+    regYear: regYear,
+    rto: rto,
+    state: state,
+    taxPaidUpto: taxPaidUpto,
+    rcStatus: rcStatus,
+    fuelType: fuelType
+  }, function(error) {
+    if (error) {
+      
+      console.log(error);
+    } else {
+      
+      alert("Vehicle details added successfully!");
+      
+      document.getElementById("vehicle-number").value = "";
+      document.getElementById("owner-name").value = "";
+      document.getElementById("owner-number").value = "";
+      document.getElementById("model").value = "";
+      document.getElementById("engine-number").value = "";
+      document.getElementById("chasis-number").value = "";
+      document.getElementById("reg-year").value = "";
+      document.getElementById("rto").value = "";
+      document.getElementById("state").value = "";
+      document.getElementById("tax-paid-upto").value = "";
+      document.getElementById("rc-status").value = "";
+      document.getElementById("fuel-type").value = "";
+    }
+  });
+}
+const vehicleNumberInput = document.getElementById("vehicle-number");
+vehicleNumberInput.addEventListener("input", function () {
+  this.value = this.value.replace(/\s/g, "").toUpperCase();
+});
+  </script>
+</head>
+<body>
+  <h1>ADD VEHICLE DETAILS</h1>
+  <form>
+    <label for="vehicle-number">Vehicle Number:</label>
+    <input type="text" onkeyup="this.value = this.value.toUpperCase();" id="vehicle-number" name="vehicle-number"><br><br>
+    
+    <label for="owner-name">Owner Name:</label>
+    <input type="text" id="owner-name" name="owner-name"><br><br>
+
+    <label for="owner-name">Owner Number:</label>
+    <input type="text" id="owner-number" name="owner-number" pattern="[0-9]*" maxlength="10"><br><br>
+    
+    <label for="model">Model:</label>
+    <input type="text" id="model" name="model"><br><br>
+    
+    <label for="engine-number">Engine Number:</label>
+    <input type="text" onkeyup="this.value = this.value.toUpperCase();" id="engine-number" name="engine-number"><br><br>
+    
+    <label for="chasis-number">Chasis Number:</label>
+    <input type="text" onkeyup="this.value = this.value.toUpperCase();" id="chasis-number" name="chasis-number"><br><br>
+    
+    <label for="reg-year">Registration Year:</label>
+    <input type="text" id="reg-year" name="reg-year"><br><br>
+    
+    <label for="rto">RTO:</label>
+    <input type="text" id="rto" name="rto"><br><br>
+    
+    <label for="state">State:</label>
+    <select id="state" name="state">
+    <option value="">Select a State/Union Territory</option>
+    <option value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option value="Assam">Assam</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Chhattisgarh">Chhattisgarh</option>
+    <option value="Goa">Goa</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+    <option value="Jharkhand">Jharkhand</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Manipur">Manipur</option>
+    <option value="Meghalaya">Meghalaya</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Nagaland">Nagaland</option>
+    <option value="Odisha">Odisha</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Rajasthan">Rajasthan</option>
+    <option value="Sikkim">Sikkim</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Telangana">Telangana</option>
+    <option value="Tripura">Tripura</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="West Bengal">West Bengal</option>
+    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+    <option value="Chandigarh">Chandigarh</option>
+    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Lakshadweep">Lakshadweep</option>
+    <option value="Puducherry">Puducherry</option>
+    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+    <option value="Ladakh">Ladakh</option>
+  </select>
+  <br><br>
+  <br><br>
+    <label for="tax-paid-upto">Tax Paid Upto:</label>
+    <input type="text" id="tax-paid-upto" name="tax-paid-upto"><br><br>
+
+    <label for="rc-status">RC Status:</label>
+    <input type="text" id="rc-status" name="rc-status"><br><br>
+
+    <label for="fuel-type">Fuel Type:</label>
+    <input type="text" id="fuel-type" name="fuel-type"><br><br>
+
+    <button type="button" onclick="addVehicle()">Add Details</button>
+  </form>
+</body>
+
+{% endblock %}

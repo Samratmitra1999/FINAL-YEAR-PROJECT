@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+     <script>
+        $(document).ready(function() {
+          $('.dropdown-toggle').dropdown({ hover: true });
+
+          
+          $('.dropdown-toggle').on('click', function () {
+            $('.dropdown-toggle').not(this).each(function(){
+              $(this).parent().removeClass('show');
+            });
+          });
+        });
+        
+    </script>
+      
+    {% block stylesheet %} {% endblock %} {% block style %} {% endblock %}
+    <style>
+      body {
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        background-attachment: fixed;
+      }
+      .box {
+        height: 100%;
+        width: 500px;
+        border: 5px solid gold;
+        background-size: contain;
+        background-position: 50% 50%;
+      }
+      .boxnoborder {
+        height: 100%;
+        width: 500px;
+        background-size: contain;
+        background-position: 50% 50%;
+      }
+      img {
+        max-width: 100%;
+        background-size: contain;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin-bottom: 3%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      th,
+      td {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 40px;
+      }
+      .dropdown-menu {
+        background-color: #383737; 
+        border: none; 
+        border-radius: 0; 
+        padding: 0; 
+        box-shadow: none; 
+      }
+      .navbar-nav .nav-link:hover {
+        background-color: #6b6a6a;
+      }
+      .navbar-nav .nav-link.active {
+        background-color: #6b6a6a;
+      }
+      .dropdown-item {
+        color: #fff; 
+      }
+
+      .dropdown-item:hover {
+        background-color: #4e555b; 
+      }
+      .navbar-brand img {
+        width: 100px;
+        height: auto;
+      }
+    </style>
+
+    <title>{% block title %}NUMBER PLATE RECOGNITION{% endblock %}</title>
+  </head>
+  <body {% block body %}{% endblock %}>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="NPRLOGO.PNG"/ width="30" height="30" class="d-inline-block align-top" alt="">
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" id="home" href="/">HOME</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              INFORMATION
+            </a>
+            <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <a class="dropdown-item" href="/getinfo">RTO INFORMATION</a>
+              <a class="dropdown-item" href="/addinfo">ADD VEHICLE DETAILS</a>
+              <a class="dropdown-item" href="/history">HISTORY</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <a class="dropdown-item" href="/about">PROJECT</a>
+              <a class="dropdown-item" href="/team">TEAM</a>
+            </div>
+          </li>
+        </div>        
+    </nav>
+    <br />
+    <div class="container"></div>
+  </nav>
+  </body>
+  {% block content %} {% endblock %}
+</html>

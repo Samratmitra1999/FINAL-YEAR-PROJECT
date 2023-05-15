@@ -1,0 +1,70 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+  
+<h1 align="center" style="font-family: 'Bungee', cursive;">CAR NUMBER PLATE RECOGNITION</h1>
+<br />
+<form method="POST" enctype="multipart/form-data">
+  {{form.hidden_tag()}}
+  <div align="center">
+    {{form.file()}}
+    <button
+      type="submit"
+      class="btn btn-primary"
+      onclick="$('#loading').show();form.submit()"
+    >
+      Upload & process
+    </button>
+  </div>
+
+  <!-- {{form.submit()}} -->
+  <br />
+  <div align="center">
+    <div id="loading" style="display: none">
+      <img src="loadingimage.gif" alt="Loading!" />
+    </div>
+  </div>
+  <!-- <div align="center">
+    <button type="submit" class="btn btn-primary">Upload & process</button>
+  </div> -->
+</form>
+<br />
+<br />
+{% if filename|length %}
+<div align="center">
+  <div class="box">
+    <img src="{{url_for('static', filename=filename) }}" alt="Output Image" />
+  </div>
+  {% endif %}
+  <br />
+  <br />
+  {% if vehicledetails|length %}
+  <div align="center">
+    <div class="boxnoborder">
+      {% for key in vehicledetails %}
+      <h2>{{key}}</h2>
+      {% if vehicledetails[key]|length %}
+      <h4>
+        <table class="centerTable" font-size:80%>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in vehicledetails[key] %}
+            <tr>
+              <td>{{ i['name'] }}</td>
+              <td>{{ i['value'] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+
+          <tbody></tbody>
+        </table>
+      </h4>
+      {% endif %} {% endfor %}
+    </div>
+  </div>
+  {% endif %} {% endblock %}
+</div>
