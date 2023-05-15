@@ -1,6 +1,7 @@
 <div align="center">
 
   <img src="static/NPRLOGO.png" alt="logo" width="200" height="auto" />
+  
   <h1>CAR NUMBER PLATE RECOGNITION</h1>
   
   <p>
