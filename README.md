@@ -404,13 +404,12 @@ Distributed under the <img src="https://img.shields.io/badge/license-Apache 2.0-
 
 <!-- Contact -->
 ## :handshake: Contact
-
 <p align="center">
-  <a href="https://github.com/your-username"><i class="fa-brands fa-square-instagram"></i></a>
-  <a href="https://www.linkedin.com/in/your-name/"><img src="https://fontawesome.com/icons/square-instagram?f=brands&s=solid" alt="LinkedIn"></a>
-  <a href="https://twitter.com/your-handle"><img src="icons/twitter.png" alt="Twitter"></a>
-  <a href="https://www.your-website.com"><img src="icons/instagram.png" alt="Instagram"></a>
-  <a href="https://www.your-website.com"><img src="icons/gmail.png" alt="Gmail"></a>
+  <a href="https://github.com/Samratmitra1999"><img src="icons/github.png" alt="GitHub"></a>
+  <a href="https://www.linkedin.com/in/samrat-mitra-0849301ba/"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+  <a href="[https://twitter.com/your-handle](https://twitter.com/SamratM45060644)"><img src="icons/twitter.png" alt="Twitter"></a>
+  <a href="https://instagram.com/_sammy_mitra?igshid=ZGUzMzM3NWJiOQ=="><img src="icons/instagram.png" alt="Instagram"></a>
+  <a href="samratmitra1999@gmail.com"><img src="icons/gmail.png" alt="Gmail"></a>
 </p>
 
 Project Link: (https://github.com/Samratmitra1999/FINAL-YEAR-PROJECT)
