@@ -33,7 +33,7 @@
   * [Deployment](#triangular_flag_on_post-deployment)
 - [Usage](#eyes-usage)
 - [Roadmap](#compass-roadmap)
-- [Flow Of The Task](#grey_question-faq)
+- [FAQ](#grey_question-faq)
 - [License](#warning-license)
 - [Contact](#handshake-contact)
 - [Acknowledgements](#gem-acknowledgements)
@@ -59,6 +59,7 @@
   <summary>Client</summary>
   <ul>
     <li><a href="https://www.python.org/">Python</a></li>
+    <li><a href="(https://flask.palletsprojects.com/en/2.3.x/">Flask</a></li>
     <li><a href="https://html.com/"></a>HTML</li>
     <li><a href="https://www.free-css.com/">CSS</a></li>
     <li><a href="https://www.javascript.com/">Javascript</a></li>
@@ -367,8 +368,8 @@ if __name__ == '__main__':
 
 
 
-<!-- Flow Of The Task -->
-## :grey_question: Flow Of The Task
+<!-- FAQ -->
+## :grey_question: FAQ
 
 - Question 1
 
@@ -382,7 +383,7 @@ if __name__ == '__main__':
 <!-- License -->
 ## :warning: License
 
-Distributed under the Apache 2.0 License. See LICENSE.txt for more information.
+Distributed under the <img src="https://img.shields.io/badge/license-Apache 2.0-blue.svg">. See LICENSE.txt for more information.
 
 
 <!-- Contact -->
