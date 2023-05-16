@@ -11,13 +11,13 @@
   <img src="images/demo.gif" alt="Demo">
 </p>
   <p>
-    **Car Number Plate Detection System Using Flask and OpenCV.**
+    Car Number Plate Detection System Using Flask and OpenCV.
     <br />
-    **A Website for Car Number Plate Recognition and Rto information.**
+    A Website for Car Number Plate Recognition and Rto information.
   </p>
   
 <br />
-# :hammer_and_wrench: Languages and Tools :
+ :hammer_and_wrench: Languages and Tools :
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original-wordmark.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/flask/flask-original-wordmark.svg" title="Flask" alt="Flask" width="40" height="40"/>&nbsp;
@@ -28,7 +28,7 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain-wordmark.svg" title="Firebase" alt="Firebase" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" **alt="Git" width="40" height="40"/>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/visualstudio/visualstudio-plain-wordmark.svg" title="Vscode" **alt="Vscode" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/visualstudio/visualstudio-plain-wordmark.svg" title="Vscode" **alt="Vscode" width="50" height="50"/>
 </div>
 <br />
   
@@ -406,7 +406,7 @@ Distributed under the <img src="https://img.shields.io/badge/license-Apache 2.0-
 ## :handshake: Contact
 
 <p align="center">
-  <a href="https://github.com/your-username"><img src="icons/github.png" alt="GitHub"></a>
+  <a href="https://github.com/your-username"><i class="fa-brands fa-square-instagram"></i></a>
   <a href="https://www.linkedin.com/in/your-name/"><img src="icons/linkedin.png" alt="LinkedIn"></a>
   <a href="https://twitter.com/your-handle"><img src="icons/twitter.png" alt="Twitter"></a>
   <a href="https://www.your-website.com"><img src="icons/instagram.png" alt="Instagram"></a>
