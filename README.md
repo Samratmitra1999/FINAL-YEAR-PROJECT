@@ -3,7 +3,13 @@
   <img src="static/logo.png" alt="logo" width="600" height="auto" />
   
   <h1>CAR NUMBER PLATE RECOGNITION</h1>
-  
+  <p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+  <img src="https://img.shields.io/badge/python-3.7%7C3.8%7C3.9-blue.svg" alt="Python">
+</p>
+<p align="center">
+  <img src="images/demo.gif" alt="Demo">
+</p>
   <p>
     Car Number Plate Detection System Using Flask and OpenCV.
     <br />
