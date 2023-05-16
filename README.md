@@ -59,7 +59,7 @@
   <summary>Client</summary>
   <ul>
     <li><a href="https://www.python.org/">Python</a></li>
-    <li><a href="(https://flask.palletsprojects.com/en/2.3.x/">Flask</a></li>
+    <li><a href="https://flask.palletsprojects.com/">Flask</a></li>
     <li><a href="https://html.com/"></a>HTML</li>
     <li><a href="https://www.free-css.com/">CSS</a></li>
     <li><a href="https://www.javascript.com/">Javascript</a></li>
