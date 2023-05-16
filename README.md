@@ -418,9 +418,17 @@ Project Link: (https://github.com/Samratmitra1999/FINAL-YEAR-PROJECT)
 <!-- TEAM -->
 ## :gem: TEAM
 
-Use this section to mention useful resources and libraries that you have used in your projects.
 
- - [Shields.io](https://shields.io/)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#travel--places)
- - [Readme Template](https://github.com/othneildrew/Best-README-Template)
+ - <a href="https://www.linkedin.com/in/samrat-mitra-0849301ba/">
+  <img src="icons/team_member1.png" alt="GitHub" width="100" height="100">
+</a>
+
+ - <a href="https://www.linkedin.com/in/shreyashi-talukdar-170059268">
+  <img src="icons/team_member2.png" alt="GitHub" width="100" height="100">
+</a>
+  
+   - <a href="https://www.linkedin.com/in/ankita-mondal-33165a207">
+  <img src="icons/team_member3.png" alt="GitHub" width="100" height="100">
+</a>
+
+ - 
