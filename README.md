@@ -4,7 +4,7 @@
   
   <h1>CAR NUMBER PLATE RECOGNITION</h1>
   <p align="center">
-  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+  <img src="https://img.shields.io/badge/license-Apache 2.0-blue.svg" alt="License">
   <img src="https://img.shields.io/badge/python-3.7%7C3.8%7C3.9-blue.svg" alt="Python">
 </p>
 <p align="center">
