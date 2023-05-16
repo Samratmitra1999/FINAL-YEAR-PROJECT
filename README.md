@@ -376,13 +376,14 @@ if __name__ == '__main__':
 <!-- License -->
 ## :warning: License
 
-Distributed under the no License. See LICENSE.txt for more information.
+Distributed under the Apache 2.0 License. See LICENSE.txt for more information.
 
 
 <!-- Contact -->
 ## :handshake: Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - samratmitra1999@gmail.com
+Samrat Mitra - [@LinkedIn_handle]https://www.linkedin.com/in/samrat-mitra-0849301ba/ 
+          - samratmitra1999@gmail.com
 
 Project Link: (https://github.com/Samratmitra1999/FINAL-YEAR-PROJECT)
 
