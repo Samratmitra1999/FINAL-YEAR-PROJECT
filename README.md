@@ -5,7 +5,8 @@
   <h1>CAR NUMBER PLATE RECOGNITION</h1>
   
   <p>
-    A Website for Car Numbe Plate Recognition and Rto information.
+    Car Number Plate Detection System Using Flask and OpenCV.
+    A Website for Car Number Plate Recognition and Rto information.
   </p>
   
 
@@ -23,8 +24,9 @@
   * [Installation](#gear-installation)
   * [Run Locally](#running-run-locally)
   * [Deployment](#triangular_flag_on_post-deployment)
+- [Usage](#eyes-usage)
 - [Roadmap](#compass-roadmap)
-- [FAQ](#grey_question-faq)
+- [Flow Of The Task](#grey_question-faq)
 - [License](#warning-license)
 - [Contact](#handshake-contact)
 - [Acknowledgements](#gem-acknowledgements)
@@ -49,10 +51,11 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-    <li><a href="https://nextjs.org/">Next.js</a></li>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-    <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
+    <li><a href="https://www.python.org/">Python</a></li>
+    <li><a href="https://html.com/"></a>HTML</li>
+    <li><a href="https://www.free-css.com/">CSS</a></li>
+    <li><a href="https://www.javascript.com/">Javascript</a></li>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
   </ul>
 </details>
 
@@ -60,16 +63,16 @@
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://firebase.google.com/">FIREBASE</a></li>
+    <li><a href="https://firebase.google.com/">Google Firebase</a></li>
   </ul>
 </details>
 
 <!-- Features -->
 ### :dart: Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- 👉Create a model that will detect a car in a live stream or video and recognize characters on number plate of the car .
+- 👉Secondly , it will use the characters and fetch the owners information using RTO API’s .
+- 👉Create a Web portal where all this information will be displayed (using Html, Css, and Javascript).
 
 <!-- Getting Started -->
 ## 	:toolbox: Getting Started
@@ -85,7 +88,10 @@ Install my-project
 
 <!-- Run Locally -->
 ### :running: Run Locally
-
+```bash
+  open Anaconda
+  cd myproject
+```
 Clone the project
 
 ```bash
@@ -114,7 +120,22 @@ To deploy this project run
 <!-- Usage -->
 ## :eyes: Usage
 
-Use this space to tell a little more about your project and how it can be used. Show additional screenshots, code samples, demos or link to other resources.
+This was a Final Year Project assigned to us by Biplab Mahapatra Sir.
+
+In this task, we have created one Web UI in which you have to select and upload one of image of your car’s number plate and then our webpage will display all the details about that car like owner name, date of registration, insurance, etc. For doing this task we have used following tools and technologies:-
+
+i) Python (Flask framework, OpenCV module, absl, re, json, etc)
+
+ii) Web Technologies (HTML, CSS, JavaScript)
+
+iii) PaddleOCR
+
+iv) Haarcascade Russian number plate model for number plate detection.
+
+v) RTO Car Registration API
+  
+vi) Google Firebase(To store and retrive rto information of vehicles in database)
+
 
 
 ```javascript
@@ -128,13 +149,18 @@ function App() {
 <!-- Roadmap -->
 ## :compass: Roadmap
 
-* [x] Todo 1
-* [ ] Todo 2
+* [1] First the code of flask will get run(app.py)
+* [2] When user upload the image it get saved in S3 bucket.
+* [3] When user upload the image it get saved in inputs folder.
+* [4] The npr.py runs in backend and the number plate gets cropped and the ocr extracts the number plate in text and displays the result.
+* [5] The result gets stored in json file and it is retrived to display in search history webpage.
+* [6] The user can get details of the searched image from databse created in firebase in Rto information webpage.
+* [2] The user can also add details of the car to database.
 
 
 
-<!-- FAQ -->
-## :grey_question: FAQ
+<!-- Flow Of The Task -->
+## :grey_question: Flow Of The Task
 
 - Question 1
 
@@ -154,7 +180,7 @@ Distributed under the no License. See LICENSE.txt for more information.
 <!-- Contact -->
 ## :handshake: Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - samratmitra1999@gmail.com
 
 Project Link: (https://github.com/Samratmitra1999/FINAL-YEAR-PROJECT)
 
