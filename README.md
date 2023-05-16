@@ -6,7 +6,7 @@
   
   <p>
     Car Number Plate Detection System Using Flask and OpenCV.
-    ****
+    <br />
     A Website for Car Number Plate Recognition and Rto information.
   </p>
   
