@@ -11,14 +11,25 @@
   <img src="images/demo.gif" alt="Demo">
 </p>
   <p>
-    Car Number Plate Detection System Using Flask and OpenCV.
+    **Car Number Plate Detection System Using Flask and OpenCV.**
     <br />
-    A Website for Car Number Plate Recognition and Rto information.
+    **A Website for Car Number Plate Recognition and Rto information.**
   </p>
   
-
 <br />
-
+### :hammer_and_wrench: Languages and Tools :
+<div>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original-wordmark.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/flask/flask-original-wordmark.svg" title="Flask" alt="Flask" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original-wordmark.svg" title="Bootstrap" alt="Bootstrap" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain-wordmark.svg" title="Firebase" alt="Firebase" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" **alt="Git" width="40" height="40"/>
+</div>
+<br />
+  
 <!-- Table of Contents -->
 # :notebook_with_decorative_cover: Table of Contents
 
@@ -371,13 +382,16 @@ if __name__ == '__main__':
 <!-- FAQ -->
 ## :grey_question: FAQ
 
-- Question 1
+- How accurate is the license plate recognition?
 
-  + Answer 1
+  + The accuracy of license plate recognition depends on various factors, including the quality of input images, lighting conditions, and the robustness of the implemented algorithms. While efforts have been made to achieve high accuracy, it is important to note that the system may encounter challenges in certain scenarios, such as low-resolution or heavily obscured license plates.
 
-- Question 2
+- Are there any limitations or known issues with the project?
 
-  + Answer 2
+  + While efforts have been made to develop a robust car number plate recognition system, there are some limitations and potential issues to be aware of. These may include difficulties in recognizing distorted or non-standard license plates, challenges in low-light or adverse weather conditions, and variations in license plate designs across different countries or regions. Additionally, the system's performance may be influenced by hardware limitations or computational resources.
+  
+- Can I use this project for commercial purposes?
+  + The specific terms of use and licensing for this project are outlined in the project repository. It is important to review the provided license to understand any restrictions or requirements associated with commercial use.
 
 
 <!-- License -->
@@ -389,8 +403,13 @@ Distributed under the <img src="https://img.shields.io/badge/license-Apache 2.0-
 <!-- Contact -->
 ## :handshake: Contact
 
-Samrat Mitra - [@LinkedIn_handle]https://www.linkedin.com/in/samrat-mitra-0849301ba/ 
-          - samratmitra1999@gmail.com
+<p align="center">
+  <a href="https://github.com/your-username"><img src="icons/github.png" alt="GitHub"></a>
+  <a href="https://www.linkedin.com/in/your-name/"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+  <a href="https://twitter.com/your-handle"><img src="icons/twitter.png" alt="Twitter"></a>
+  <a href="https://www.your-website.com"><img src="icons/instagram.png" alt="Instagram"></a>
+  <a href="https://www.your-website.com"><img src="icons/gmail.png" alt="Gmail"></a>
+</p>
 
 Project Link: (https://github.com/Samratmitra1999/FINAL-YEAR-PROJECT)
 
