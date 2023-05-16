@@ -419,16 +419,15 @@ Project Link: (https://github.com/Samratmitra1999/FINAL-YEAR-PROJECT)
 ## :gem: TEAM
 
 
- - <a href="https://www.linkedin.com/in/samrat-mitra-0849301ba/">
-  <img src="icons/team_member1.png" alt="GitHub" width="100" height="100">
+ <a href="https://www.linkedin.com/in/samrat-mitra-0849301ba/"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+  <a><img src="icons/team_member1.png" alt="GitHub" width="100" height="100">
 </a>
 
- - <a href="https://www.linkedin.com/in/shreyashi-talukdar-170059268">
-  <img src="icons/team_member2.png" alt="GitHub" width="100" height="100">
+ <a href="https://www.linkedin.com/in/shreyashi-talukdar-170059268"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+  <a><img src="icons/team_member2.png" alt="GitHub" width="100" height="100">
 </a>
   
-   - <a href="https://www.linkedin.com/in/ankita-mondal-33165a207">
-  <img src="icons/team_member3.png" alt="GitHub" width="100" height="100">
+  <a href="https://www.linkedin.com/in/ankita-mondal-33165a207"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+  <a><img src="icons/team_member3.png" alt="GitHub" width="100" height="100">
 </a>
 
- - 
