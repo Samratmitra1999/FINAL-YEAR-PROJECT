@@ -371,9 +371,9 @@ if __name__ == '__main__':
 <!-- Roadmap -->
 ## :compass: Roadmap
 
-* [1] First the code of flask will get run(app.py)
-* [2] When user upload the image it get saved in S3 bucket.
-* [3] When user upload the image it get saved in inputs folder.
+* [1] First the code of flask will get run(main.py)
+* [2] When user upload the image it get saved in inputs/images folder.
+* [3] The Results of the cropped number plate gets stored in the outputs/images folder.
 * [4] The npr.py runs in backend and the number plate gets cropped and the ocr extracts the number plate in text and displays the result.
 * [5] The result gets stored in json file and it is retrieved to display in search history webpage.
 * [6] The user can get details of the searched image from databse created in firebase in Rto information webpage.
